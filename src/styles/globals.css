@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+
+:root {
+  --dark-blue: #0b0d17;
+  --light-blue: #d0d6f9;
+  --off-white: #ffffff;
+
+  --heading-1: 150px;
+  --heading-2: 100px;
+  --heading-3: 56px;
+  --heading-4: 32px;
+  --heading-5: 28px;
+  --heading-5-letter-spacing : 4.75px;
+
+  --subheading-1: 28px;
+  --subheading-2: 14px 2.35;
+  --subheading-2-letter-spacing : 2.35px;
+
+  --nav-text: 16px;
+  --nav-letter-spacing : 2.7px;
+
+  --body-text: 18px;
+  
+  --primary-font :  "Bellefair", serif;
+  --secondary-font : 'Barlow Condensed', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--primary-font);
+
+  background-image: url('background-home-desktop.jpg');
+  background-size: cover;
+ 
+}
