@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../styles/Destination.module.css";
 
+
+
 export const Destination = ({ destinations }: any) => {
   const [artiveTab, setActiveTab] = useState(0);
 
@@ -10,6 +12,8 @@ export const Destination = ({ destinations }: any) => {
     const tab = destinations.indexOf(e);
     setActiveTab(tab);
   };
+
+ console.log(`/assets/destination/${destinations[artiveTab].images.png}`)
 
   return (
     <div className="background destination-page">
@@ -19,14 +23,23 @@ export const Destination = ({ destinations }: any) => {
             <span>01</span> Pick your destination
           </h4>
           <div className={styles.tabs}>
-            <Image width={445} height={445} src={destinations[artiveTab].images.png} alt="image" className={styles.image} />
-
+            <Image
+              width={445}
+              height={445}
+              src={`/assets/destination/${destinations[artiveTab].images.png}`}
+              alt="image"
+            />
+          
             <div className={styles.content}>
               <ul className={styles.navigator}>
                 {destinations.map((e: any) => (
                   <li
                     onClick={() => handleClick(e)}
-                    className={destinations.indexOf(e) === artiveTab ? `${styles.navitem} ${styles.active}` : styles.navitem}
+                    className={
+                      destinations.indexOf(e) === artiveTab
+                        ? `${styles.navitem} ${styles.active}`
+                        : styles.navitem
+                    }
                     key={destinations.indexOf(e)}
                   >
                     {e.name}
@@ -43,13 +56,13 @@ export const Destination = ({ destinations }: any) => {
                   <div>
                     <div className={styles.subheading2}>AVG. DISTANCE</div>
                     <div className={styles.subheading1}>
-                    {destinations[artiveTab].distance}
+                      {destinations[artiveTab].distance}
                     </div>
                   </div>
                   <div>
                     <div className={styles.subheading2}>Est. travel time</div>
                     <div className={styles.subheading1}>
-                    {destinations[artiveTab].travel}
+                      {destinations[artiveTab].travel}
                     </div>
                   </div>
                 </div>
