@@ -10,19 +10,19 @@
   --heading-3: 56px;
   --heading-4: 32px;
   --heading-5: 28px;
-  --heading-5-letter-spacing : 4.75px;
+  --heading-5-letter-spacing: 4.75px;
 
   --subheading-1: 28px;
   --subheading-2: 14px 2.35;
-  --subheading-2-letter-spacing : 2.35px;
+  --subheading-2-letter-spacing: 2.35px;
 
   --nav-text: 16px;
-  --nav-letter-spacing : 2.7px;
+  --nav-letter-spacing: 2.7px;
 
   --body-text: 18px;
-  
-  --primary-font :  "Bellefair", serif;
-  --secondary-font : 'Barlow Condensed', sans-serif;
+
+  --primary-font: "Bellefair", serif;
+  --secondary-font: "Barlow Condensed", sans-serif;
 }
 
 * {
@@ -33,8 +33,25 @@
 
 html {
   font-family: var(--primary-font);
-
-  background-image: url('background-home-desktop.jpg');
+}
+.background{
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid var(--dark-blue);
   background-size: cover;
- 
+
+}
+.home-page {
+  background-image: url("../../public/assets/home/background-home-desktop.jpg");
+}
+.destination-page {
+  background-image: url("../../public/assets/destination/background-destination-desktop.jpg");
+}
+.crew-page{
+  background-image: url("../../public/assets/crew/background-crew-desktop.jpg");
+
+}
+.technology-page{
+  background-image: url("../../public/assets/technology/background-technology-desktop.jpg");
+
 }

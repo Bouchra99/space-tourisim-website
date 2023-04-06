@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 import styles from "@/styles/Home.module.css";
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <div className={styles.intro}>
+    <div className='background home-page'>
+       <Layout >
+      <div className={styles.main}>
         <h5 className={styles.h5}>So you want to travel to</h5>
         <h1  className={styles.h1}>space</h1>
         <p  className={styles.text}>
@@ -20,6 +20,8 @@ export default function Home() {
       <button className={styles.main_btn}>
         Explore
       </button>
-    </>
+    </Layout>
+    </div>
+   
   );
 }

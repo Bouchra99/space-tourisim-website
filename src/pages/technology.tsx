@@ -1,9 +1,13 @@
+import Layout from '@/components/Layout'
 import React from 'react'
 
-const technology = () => {
+const Technology = () => {
   return (
-    <div>technology</div>
+    <div className='background technology-page'>
+    <Layout>technology</Layout>
+
+    </div>
   )
 }
 
-export default technology
+export default Technology

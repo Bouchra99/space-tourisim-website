@@ -35,6 +35,9 @@
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
 }
+.navbar a{
+  text-decoration-line: none;
+}
 .navitem {
   color: var(--off-white);
   text-transform: uppercase;
@@ -42,7 +45,10 @@
   letter-spacing: var(--nav-letter-spacing);
   font-family: var(--secondary-font);
   cursor: pointer;
+  
 }
+
+
 .navitem span {
   font-weight: 700;
 }

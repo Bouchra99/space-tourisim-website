@@ -1,8 +1,13 @@
 import React from "react";
-import { useRouter } from 'next/router';
+import Layout from "@/components/Layout";
+import styles from "../styles/Crew.module.css";
 
-const crew = () => {
- return <div data-page={"crew"}>crew</div>;
+const Crew = () => {
+  return(
+  <div className="background crew-page">
+    <Layout>crew</Layout>
+  </div>
+  );
 };
 
-export default crew;
+export default Crew;
