@@ -35,7 +35,7 @@
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
 }
-.navbar a{
+.navbar a {
   text-decoration-line: none;
 }
 .navitem {
@@ -45,25 +45,26 @@
   letter-spacing: var(--nav-letter-spacing);
   font-family: var(--secondary-font);
   cursor: pointer;
-  
 }
-
 
 .navitem span {
   font-weight: 700;
 }
 
-
-.navitem::after{
-    content: "";
-    height: 1px;
-    width: 100% ;
-    background-color: var(--off-white);
-    opacity: 0;
-    position: relative;
-    top:  38px;
+.navitem::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: var(--off-white);
+  opacity: 0;
+  position: relative;
+  top: 38px;
 }
-.navitem:hover::after{
-    display: block;
-    opacity: 0.5;
+.navitem.active::after {
+  display: block;
+  opacity: 1;
+}
+.navitem:hover::after {
+  display: block;
+  opacity: 0.5;
 }
