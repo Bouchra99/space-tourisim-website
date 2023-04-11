@@ -46,8 +46,15 @@ const Technology = ({ technology }: any) => {
               width={515}
               height={527}
               src={`/assets/technology/${technology[artiveTab].images.portrait}`}
-              alt = "image"
-              className={styles.image}
+              alt="image"
+              className={styles.portrait}
+            />
+            <Image
+              width={200}
+              height={100}
+              src={`/assets/technology/${technology[artiveTab].images.landscape}`}
+              alt="image"
+              className={styles.landscape}
             />
           </div>
         </div>

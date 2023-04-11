@@ -28,6 +28,7 @@ export const Destination = ({ destinations }: any) => {
               height={445}
               src={`/assets/destination/${destinations[artiveTab].images.png}`}
               alt="image"
+              className={styles.image}
             />
           
             <div className={styles.content}>
