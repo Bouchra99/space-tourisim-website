@@ -5,7 +5,7 @@ import styles from "../styles/Destination.module.css";
 
 
 
-export const Destination = ({ destinations }: any) => {
+const Destination = ({ destinations }: any) => {
   const [artiveTab, setActiveTab] = useState(0);
 
   const handleClick = (e: any) => {
@@ -79,7 +79,7 @@ export const Destination = ({ destinations }: any) => {
 export default Destination;
 
 //@ts-ignore
-export const getServerSideProps = async (pageContext) => {
+export const getStaticProps = async (pageContext) => {
   const apiResponse = await fetch("https://bouchra99.github.io/json-api/db.json");
   const {destinations} = await apiResponse.json();
   console.log(destinations)

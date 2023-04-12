@@ -66,9 +66,11 @@ const Technology = ({ technology }: any) => {
 export default Technology;
 
 //@ts-ignore
-export const getServerSideProps = async (pageContext) => {
-  const apiResponse = await fetch("https://bouchra99.github.io/json-api/db.json");
-  const {technology} = await apiResponse.json();
+export const getSergetStaticPropsverSideProps = async (pageContext) => {
+  const apiResponse = await fetch(
+    "https://bouchra99.github.io/json-api/db.json"
+  );
+  const { technology } = await apiResponse.json();
   return {
     props: {
       technology,

@@ -62,7 +62,7 @@ const Crew = ({ crew }: any) => {
 export default Crew;
 
 //@ts-ignore
-export const getServerSideProps = async (pagContext) => {
+export const getStaticProps = async (pagContext) => {
   const apiResponse = await fetch("https://bouchra99.github.io/json-api/db.json");
   const {crew} = await apiResponse.json();
 
