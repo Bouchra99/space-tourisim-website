@@ -20,7 +20,6 @@ const Crew = ({ crew }: any) => {
           </h5>
           <div className={styles.tabs}>
             <div className={styles.content}>
-           
               <div className={styles.destination}>
                 <h4 className={styles.h4}>{crew[artiveTab].role}</h4>
                 <h3 className={styles.h3}>{crew[artiveTab].name}</h3>
@@ -48,7 +47,6 @@ const Crew = ({ crew }: any) => {
               className={styles.image}
               width={556}
               height={700}
-              
               src={`/assets/crew/${crew[artiveTab].images.png}`}
               alt="image"
             />
@@ -63,12 +61,14 @@ export default Crew;
 
 //@ts-ignore
 export const getStaticProps = async (pagContext) => {
-  const apiResponse = await fetch("https://bouchra99.github.io/json-api/db.json");
-  const {crew} = await apiResponse.json();
-
+  const options = {};
+  const apiResponse = await fetch(
+    "https://bouchra99.github.io/json-api/db.json"
+  );
+  const { crew } = await apiResponse.json();
   return {
     props: {
-      crew,
+      crew
     },
   };
 };

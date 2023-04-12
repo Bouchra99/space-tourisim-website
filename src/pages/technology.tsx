@@ -20,7 +20,7 @@ const Technology = ({ technology }: any) => {
           <div className={styles.tabs}>
             <div className={styles.content}>
               <ul className={styles.navigator}>
-                {technology.map((e: any) => (
+                {technology?.map((e: any) => (
                   <li
                     onClick={() => handleClick(e)}
                     className={
@@ -66,14 +66,14 @@ const Technology = ({ technology }: any) => {
 export default Technology;
 
 //@ts-ignore
-export const getSergetStaticPropsverSideProps = async (pageContext) => {
+export const getStaticProps = async (pageContext) => {
   const apiResponse = await fetch(
     "https://bouchra99.github.io/json-api/db.json"
   );
   const { technology } = await apiResponse.json();
   return {
     props: {
-      technology,
+      technology
     },
   };
 };

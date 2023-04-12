@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../styles/Destination.module.css";
+import { error } from "console";
 
 
 
@@ -82,10 +83,9 @@ export default Destination;
 export const getStaticProps = async (pageContext) => {
   const apiResponse = await fetch("https://bouchra99.github.io/json-api/db.json");
   const {destinations} = await apiResponse.json();
-  console.log(destinations)
   return {
     props: {
-      destinations,
+      destinations
     },
   };
 };
