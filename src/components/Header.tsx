@@ -23,7 +23,7 @@ const Header = () => {
       <input
         // @ts-ignore
         value={checked}
-        defaultChecked = {false}
+        // defaultChecked = {true}
         onChange={handleChange}
         className={styles.input}
         type="checkbox"

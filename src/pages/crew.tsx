@@ -63,8 +63,8 @@ export default Crew;
 
 //@ts-ignore
 export const getServerSideProps = async (pagContext) => {
-  const apiResponse = await fetch("http://localhost:3002/crew");
-  const crew = await apiResponse.json();
+  const apiResponse = await fetch("https://bouchra99.github.io/json-api/db.json");
+  const {crew} = await apiResponse.json();
 
   return {
     props: {

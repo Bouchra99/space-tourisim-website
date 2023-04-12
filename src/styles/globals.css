@@ -35,7 +35,7 @@
 
 html{
   font-family: var(--primary-font);
-  background-color: red;
+  background-color: var(--dark-blue);
  
 }
 
